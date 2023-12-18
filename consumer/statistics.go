@@ -19,13 +19,11 @@ package consumer
 
 import (
 	"container/list"
-	"fmt"
 	"sync"
 	"sync/atomic"
 	"time"
 
 	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
 )
 
 type StatsManager struct {
@@ -421,36 +419,36 @@ func (si *statsItem) samplingInHour() {
 }
 
 func (si *statsItem) printAtMinutes() {
-	ss := computeStatsData(&si.csListMinuteLock, si.csListMinute)
-	rlog.Info("Stats In One Minute.", map[string]interface{}{
-		"statsName": si.statsName,
-		"statsKey":  si.statsKey,
-		"SUM":       ss.sum,
-		"TPS":       fmt.Sprintf("%.2f", ss.tps),
-		"AVGPT":     ss.avgpt,
-	})
+	_ = computeStatsData(&si.csListMinuteLock, si.csListMinute)
+	// rlog.Info("Stats In One Minute.", map[string]interface{}{
+	// 	"statsName": si.statsName,
+	// 	"statsKey":  si.statsKey,
+	// 	"SUM":       ss.sum,
+	// 	"TPS":       fmt.Sprintf("%.2f", ss.tps),
+	// 	"AVGPT":     ss.avgpt,
+	// })
 }
 
 func (si *statsItem) printAtHour() {
-	ss := computeStatsData(&si.csListHourLock, si.csListHour)
-	rlog.Info("Stats In One Hour.", map[string]interface{}{
-		"statsName": si.statsName,
-		"statsKey":  si.statsKey,
-		"SUM":       ss.sum,
-		"TPS":       fmt.Sprintf("%.2f", ss.tps),
-		"AVGPT":     ss.avgpt,
-	})
+	_ = computeStatsData(&si.csListHourLock, si.csListHour)
+	// rlog.Info("Stats In One Hour.", map[string]interface{}{
+	// 	"statsName": si.statsName,
+	// 	"statsKey":  si.statsKey,
+	// 	"SUM":       ss.sum,
+	// 	"TPS":       fmt.Sprintf("%.2f", ss.tps),
+	// 	"AVGPT":     ss.avgpt,
+	// })
 }
 
 func (si *statsItem) printAtDay() {
-	ss := computeStatsData(&si.csListDayLock, si.csListDay)
-	rlog.Info("Stats In One Day.", map[string]interface{}{
-		"statsName": si.statsName,
-		"statsKey":  si.statsKey,
-		"SUM":       ss.sum,
-		"TPS":       fmt.Sprintf("%.2f", ss.tps),
-		"AVGPT":     ss.avgpt,
-	})
+	_ = computeStatsData(&si.csListDayLock, si.csListDay)
+	// rlog.Info("Stats In One Day.", map[string]interface{}{
+	// 	"statsName": si.statsName,
+	// 	"statsKey":  si.statsKey,
+	// 	"SUM":       ss.sum,
+	// 	"TPS":       fmt.Sprintf("%.2f", ss.tps),
+	// 	"AVGPT":     ss.avgpt,
+	// })
 }
 
 func nextMinutesTime() time.Time {
