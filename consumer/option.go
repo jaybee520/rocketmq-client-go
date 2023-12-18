@@ -21,9 +21,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/apache/rocketmq-client-go/v2/hooks"
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
+	"github.com/jaybee520/rocketmq-client-go/v2/hooks"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal"
+	"github.com/jaybee520/rocketmq-client-go/v2/primitive"
 )
 
 type consumerOptions struct {

@@ -25,7 +25,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/apache/rocketmq-client-go/v2/rlog"
+	"github.com/jaybee520/rocketmq-client-go/v2/rlog"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

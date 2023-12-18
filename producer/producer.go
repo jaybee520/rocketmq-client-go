@@ -26,13 +26,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	errors2 "github.com/apache/rocketmq-client-go/v2/errors"
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/internal/remote"
-	"github.com/apache/rocketmq-client-go/v2/internal/utils"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
 	"github.com/google/uuid"
+	errors2 "github.com/jaybee520/rocketmq-client-go/v2/errors"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal/remote"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal/utils"
+	"github.com/jaybee520/rocketmq-client-go/v2/primitive"
+	"github.com/jaybee520/rocketmq-client-go/v2/rlog"
 	"github.com/pkg/errors"
 )
 

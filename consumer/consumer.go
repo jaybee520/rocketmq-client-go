@@ -30,13 +30,13 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"github.com/tidwall/gjson"
 
-	"github.com/apache/rocketmq-client-go/v2/errors"
-	"github.com/apache/rocketmq-client-go/v2/hooks"
-	"github.com/apache/rocketmq-client-go/v2/internal"
-	"github.com/apache/rocketmq-client-go/v2/internal/remote"
-	"github.com/apache/rocketmq-client-go/v2/internal/utils"
-	"github.com/apache/rocketmq-client-go/v2/primitive"
-	"github.com/apache/rocketmq-client-go/v2/rlog"
+	"github.com/jaybee520/rocketmq-client-go/v2/errors"
+	"github.com/jaybee520/rocketmq-client-go/v2/hooks"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal/remote"
+	"github.com/jaybee520/rocketmq-client-go/v2/internal/utils"
+	"github.com/jaybee520/rocketmq-client-go/v2/primitive"
+	"github.com/jaybee520/rocketmq-client-go/v2/rlog"
 )
 
 const (

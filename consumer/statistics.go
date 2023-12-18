@@ -23,7 +23,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/apache/rocketmq-client-go/v2/primitive"
+	"github.com/jaybee520/rocketmq-client-go/v2/primitive"
 )
 
 type StatsManager struct {
